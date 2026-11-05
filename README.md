@@ -1,13 +1,13 @@
 
 <div align="center">
 
-<img src="assets/banner.gif" width="100%" alt="Anime fantasy banner">
+<img src="assets/banner.png" width="100%" alt="SPA-RK113 Anime Fantasy Banner">
 
 # ✦ SPA-RK113 ✦
 
 ### DEVELOPER • EXPLORER • ANIME ENTHUSIAST
 
-*Building things, exploring technology, creating something different.*
+*Building things, exploring technology, and creating something different.*
 
 [![GitHub](https://img.shields.io/badge/GitHub-Profile-171327?style=for-the-badge&logo=github)](https://github.com/spa-rk113)
 [![Instagram](https://img.shields.io/badge/Instagram-Connect-49306D?style=for-the-badge&logo=instagram)](https://instagram.com/spa_rk113)
@@ -33,7 +33,7 @@
 ### SUNG JINWOO
 **SOLO LEVELING**
 
-*The journey from the weakest hunter to the Shadow Monarch.*
+*From the weakest hunter to the Shadow Monarch.*
 
 </div>
 
@@ -75,10 +75,10 @@
 
 <img src="assets/konosuba.gif" width="100%" alt="Kazuma Satou and Darkness">
 
-### KAZUMA SATOu • DARKNESS
+### KAZUMA SATOU • DARKNESS
 **KONOSUBA**
 
-*An adventure where nothing ever goes according to plan.*
+*An adventure where nothing goes according to plan.*
 
 </div>
 
@@ -114,15 +114,31 @@
 
 ---
 
+## 📁 DIGITAL WORKSPACE
+
+<div align="center">
+
+### FUTURISTIC PROJECT INTERFACE
+
+Explore my projects and experiments in a holographic workspace.
+
+**[🚀 OPEN MY DIGITAL WORKSPACE](#)**
+
+<sub>Interactive website coming soon.</sub>
+
+</div>
+
+---
+
 ## 📊 GITHUB STATISTICS
 
 <div align="center">
 
-<img width="95%" src="https://github-readme-stats.vercel.app/api?username=spa-rk113&show_icons=true&theme=tokyonight&hide_border=true&bg_color=080810&title_color=A68BCE&icon_color=B49A72&text_color=D5D1E0" alt="GitHub stats">
+<img width="95%" src="https://github-readme-stats.vercel.app/api?username=spa-rk113&show_icons=true&theme=tokyonight&hide_border=true&bg_color=080810&title_color=A68BCE&icon_color=B49A72&text_color=D5D1E0" alt="GitHub statistics">
 
-<img width="95%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=spa-rk113&layout=compact&theme=tokyonight&hide_border=true&bg_color=080810&title_color=A68BCE&text_color=D5D1E0" alt="Top languages">
+<img width="95%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=spa-rk113&layout=compact&theme=tokyonight&hide_border=true&bg_color=080810&title_color=A68BCE&text_color=D5D1E0" alt="Most used languages">
 
-<img width="95%" src="https://github-readme-streak-stats.herokuapp.com/?user=spa-rk113&theme=tokyonight&hide_border=true&background=080810&ring=A68BCE&fire=B49A72&currStreakLabel=D5D1E0" alt="GitHub streak">
+<img width="95%" src="https://github-readme-streak-stats.herokuapp.com/?user=spa-rk113&theme=tokyonight&hide_border=true&background=080810&ring=A68BCE&fire=B49A72&currStreakLabel=D5D1E0" alt="GitHub contribution streak">
 
 </div>
 
@@ -146,6 +162,6 @@
 
 *Every great journey begins somewhere.*
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=0:080810,50:49306D,100:171327&height=120&section=footer" width="100%" alt="Footer">
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:080810,50:49306D,100:171327&height=120&section=footer" width="100%" alt="Purple fantasy footer">
 
 </div>
