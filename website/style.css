@@ -1,0 +1,369 @@
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #080810;
+  --purple: #a68bce;
+  --silver: #d5d1e0;
+  --muted: #9892aa;
+  --border: rgba(166,139,206,.23);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--silver);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+}
+
+.ambient {
+  position: fixed;
+  width: 350px;
+  height: 350px;
+  background: #7147a8;
+  filter: blur(120px);
+  opacity: .16;
+  top: 20%;
+  left: -180px;
+  pointer-events: none;
+  z-index: -1;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 7%;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  background: rgba(8,8,16,.85);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(18px);
+}
+
+.logo {
+  font: 700 18px 'Space Grotesk';
+  color: white;
+  text-decoration: none;
+}
+
+.logo:first-letter {
+  color: var(--purple);
+}
+
+nav {
+  display: flex;
+  gap: 24px;
+}
+
+nav a, footer a {
+  color: var(--muted);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+nav a:hover, footer a:hover {
+  color: white;
+}
+
+.hero {
+  padding: 110px 8%;
+  min-height: 470px;
+}
+
+.tag {
+  color: var(--purple);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font: 700 clamp(45px,7vw,76px)/1.08 'Space Grotesk';
+}
+
+.hero h1 span {
+  background: linear-gradient(90deg,#d5d1e0,#a68bce,#809dbb);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.description {
+  color: var(--muted);
+  margin-top: 20px;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+.enter {
+  display: inline-block;
+  padding: 14px 22px;
+  margin-top: 28px;
+  border: 1px solid var(--border);
+  background: rgba(73,48,109,.3);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 12px;
+  transition: .3s;
+}
+
+.enter:hover {
+  background: rgba(73,48,109,.7);
+  box-shadow: 0 0 25px #49306d;
+}
+
+main, .anime-section {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 24px 70px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h2 {
+  font: 600 36px 'Space Grotesk';
+  margin-bottom: 22px;
+}
+
+.online {
+  color: #8bd5aa;
+  font-size: 10px;
+}
+
+.path {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  padding: 14px;
+  border-radius: 8px 8px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.folders {
+  display: grid;
+  grid-template-columns: repeat(5,1fr);
+  gap: 12px;
+  padding: 17px;
+  border: 1px solid var(--border);
+  border-top: none;
+  background: rgba(17,15,29,.6);
+  border-radius: 0 0 12px 12px;
+}
+
+.folder {
+  background: linear-gradient(145deg,rgba(73,48,109,.24),rgba(14,20,35,.7));
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px 13px;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  transition: .3s;
+  min-height: 130px;
+}
+
+.folder:hover, .folder.active {
+  transform: translateY(-6px);
+  border-color: var(--purple);
+  box-shadow: 0 0 25px rgba(166,139,206,.2);
+  background: rgba(73,48,109,.4);
+}
+
+.folder-icon {
+  display: block;
+  color: var(--purple);
+  font-size: 30px;
+  margin-bottom: 15px;
+}
+
+.folder strong {
+  display: block;
+  font-size: 13px;
+}
+
+.folder small {
+  display: block;
+  color: var(--muted);
+  margin-top: 7px;
+  font-size: 10px;
+}
+
+.file-window {
+  margin-top: 20px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  background: rgba(23,19,39,.6);
+  backdrop-filter: blur(15px);
+  min-height: 150px;
+}
+
+.window-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.window-header h3 {
+  font: 600 20px 'Space Grotesk';
+}
+
+.close {
+  background: transparent;
+  color: white;
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  width: 35px;
+  height: 35px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+#fileList {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 10px;
+}
+
+.file-item {
+  padding: 15px;
+  background: rgba(255,255,255,.035);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 8px;
+  animation: appear .35s ease both;
+}
+
+.file-item span {
+  color: var(--purple);
+  margin-right: 9px;
+}
+
+.file-item small {
+  display: block;
+  color: var(--muted);
+  margin: 7px 0 0 23px;
+}
+
+.empty {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.anime-section {
+  padding-top: 45px;
+}
+
+.anime-grid {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 14px;
+}
+
+.anime-grid article {
+  padding: 25px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: linear-gradient(130deg,rgba(73,48,109,.2),rgba(16,29,50,.2));
+  transition: .3s;
+}
+
+.anime-grid article:hover {
+  transform: translateY(-5px);
+  border-color: var(--purple);
+}
+
+.anime-grid article span {
+  color: var(--purple);
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.anime-grid h3 {
+  font: 600 20px 'Space Grotesk';
+  margin: 13px 0 7px;
+}
+
+.anime-grid p {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+footer {
+  border-top: 1px solid rgba(255,255,255,.08);
+  padding: 25px 7%;
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+  color: var(--muted);
+  font-size: 11px;
+}
+
+@keyframes appear {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media(max-width:760px) {
+  header {
+    flex-direction: column;
+    gap: 17px;
+  }
+
+  nav {
+    gap: 16px;
+  }
+
+  .hero {
+    padding: 80px 7%;
+  }
+
+  .folders {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  #fileList, .anime-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .heading {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  footer {
+    flex-wrap: wrap;
+  }
+}
+
+@media(prefers-reduced-motion:reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
