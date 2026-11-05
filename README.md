@@ -1,222 +1,228 @@
 
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&color=0B0718&height=220&section=header&text=RISHABH&fontSize=80&fontColor=FFFFFF&fontAlignY=45&desc=DEVELOPER%20%7C%20CREATOR%20%7C%20TECH%20ENTHUSIAST&descSize=16&descColor=00E5FF&animation=fadeIn"/>
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=230&color=0:080817,40:30105D,75:5726A8,100:00C9FF&text=RISHABH&fontSize=75&fontColor=FFFFFF&fontAlignY=40&animation=fadeIn&desc=THE%20DIGITAL%20WORKSPACE&descSize=15&descAlignY=62&descColor=9DEBFF"/>
 
-<br/>
-
-<img src="https://readme-typing-svg.demolab.com?font=Space+Mono&size=19&duration=2500&pause=900&color=A78BFA&center=true&vCenter=true&width=650&lines=Welcome+to+my+digital+space.;Building+ideas+into+reality.;Exploring+the+world+of+technology.;Always+learning.+Always+creating." />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=17&duration=2400&pause=900&color=BFA4FF&center=true&vCenter=true&width=500&lines=Welcome+to+my+digital+world;Building+ideas+into+reality;Exploring.+Creating.+Improving." />
 
 <br/><br/>
 
 <a href="https://github.com/spa-rk113">
-<img src="https://img.shields.io/badge/GITHUB-111827?style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/GITHUB-11111F?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
 <a href="https://instagram.com/spa_rk113">
-<img src="https://img.shields.io/badge/INSTAGRAM-E1306C?style=for-the-badge&logo=instagram&logoColor=white"/>
-</a>
-<a href="https://github.com/spa-rk113?tab=repositories">
-<img src="https://img.shields.io/badge/PROJECTS-7C3AED?style=for-the-badge&logo=github&logoColor=white"/>
+<img src="https://img.shields.io/badge/INSTAGRAM-C13584?style=for-the-badge&logo=instagram&logoColor=white"/>
 </a>
 
 <br/><br/>
 
-<img src="https://komarev.com/ghpvc/?username=spa-rk113&style=flat-square&color=8B5CF6&label=PROFILE+VISITORS"/>
+<img src="https://komarev.com/ghpvc/?username=spa-rk113&style=for-the-badge&color=773BCE&label=VISITORS"/>
 
 </div>
 
-<br/>
+---
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/01-ABOUT_ME-8B5CF6?style=for-the-badge"/>
+
+# A LITTLE ABOUT ME
+
+<sub>━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</sub>
+
+### 👨‍💻 Rishabh
+
+**TECH ENTHUSIAST · CREATOR · EXPLORER**
+
+</div>
+
+I enjoy exploring technology, experimenting with code and turning interesting ideas into useful projects.
 
 <table>
 <tr>
-<td width="58%" valign="middle">
+<td align="center">
 
-# Hello, World! 👋
+<img src="https://img.shields.io/badge/FOCUS-00C9FF?style=flat-square"/>
 
-I'm **Rishabh**, a tech enthusiast who loves exploring, building and experimenting with technology.
+🌐 Web Development
 
-I enjoy creating useful tools, discovering how things work and turning random ideas into real projects.
+⚙️ Automation
 
-**CURRENT FOCUS**
+🎮 Game Technology
 
-- 🌐 Web development
-- ⚙️ Programming and automation
-- 🎮 Game technology and WebAssembly
-- 🚀 Building independent projects
-
-</td>
-<td width="42%" align="center" valign="middle">
-
-<img width="180" src="https://skillicons.dev/icons?i=html,css,js,nodejs,python,linux&perline=2"/>
-
-<br/><br/>
-
-**MY PHILOSOPHY**
-
-`Think → Build → Test → Improve`
+🚀 Independent Projects
 
 </td>
 </tr>
 </table>
 
-<br/>
-
 <div align="center">
 
-# ✦ FEATURED PROJECTS
-
-<sub>Things I'm building and experimenting with.</sub>
+<code>THINK</code> → <code>BUILD</code> → <code>TEST</code> → <code>IMPROVE</code>
 
 </div>
 
-<table>
-<tr>
-<td width="50%" valign="top">
-
-<h3>🌐 WebXtract</h3>
-
-Website resource inspection and extraction experiments.
-
-<br/>
-
-<img src="https://img.shields.io/badge/WEB-TOOLS-06B6D4?style=flat-square"/>
-<img src="https://img.shields.io/badge/EXPERIMENTAL-8B5CF6?style=flat-square"/>
-
-<br/><br/>
-
-<a href="https://github.com/spa-rk113?tab=repositories">Explore repositories →</a>
-
-</td>
-<td width="50%" valign="top">
-
-<h3>🎮 WASM Game Extractor</h3>
-
-Exploring WebAssembly game resources and extraction.
-
-<br/>
-
-<img src="https://img.shields.io/badge/WASM-7C3AED?style=flat-square"/>
-<img src="https://img.shields.io/badge/GAME_TECH-EC4899?style=flat-square"/>
-
-<br/><br/>
-
-<a href="https://github.com/spa-rk113/LEGACY">Explore LEGACY →</a>
-
-</td>
-</tr>
-</table>
-
-<br/>
+---
 
 <div align="center">
 
-# ✦ FIND ME ON INSTAGRAM
+<img src="https://img.shields.io/badge/02-TECH_STACK-8B5CF6?style=for-the-badge"/>
 
-</div>
+# MY TOOLKIT
 
-<table>
-<tr>
-<td width="30%" align="center">
-
-<a href="https://instagram.com/spa_rk113">
-
-<img src="https://img.shields.io/badge/INSTAGRAM-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
+<sub>Technologies I'm exploring and working with.</sub>
 
 <br/><br/>
-
-<img width="100" src="https://ui-avatars.com/api/?name=spa+rk113&background=833AB4&color=fff&size=200&bold=true"/>
-
-</a>
-
-</td>
-<td width="70%" valign="middle">
-
-### @spa_rk113
-
-**Rishabh Minj**
-
-Personal blog
-
-<br/>
-
-| 12 | 65 | 7 |
-|:---:|:---:|:---:|
-| Posts | Followers | Following |
-
-<a href="https://instagram.com/spa_rk113">
-<img src="https://img.shields.io/badge/VISIT_INSTAGRAM-OPEN_PROFILE-E1306C?style=for-the-badge&logo=instagram"/>
-</a>
-
-</td>
-</tr>
-</table>
-
-<br/>
-
-<div align="center">
-
-# ✦ TECH STACK
 
 <img src="https://skillicons.dev/icons?i=html,css,js,nodejs,python,git,github,linux,bash&theme=dark"/>
 
-<br/><br/>
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/03-PROJECTS-8B5CF6?style=for-the-badge"/>
+
+# SELECTED PROJECTS
+
+<sub>Experiments, tools and things in development.</sub>
 
 </div>
 
 <table>
 <tr>
-<td align="center" width="33%">
+<td>
 
-**FRONTEND**
+<img src="https://img.shields.io/badge/01-WEB_TOOLS-06B6D4?style=flat-square"/>
 
-HTML · CSS · JavaScript
+### 🌐 WebXtract
+
+Website resource inspection and extraction project.
+
+<a href="https://github.com/spa-rk113?tab=repositories">
+<img src="https://img.shields.io/badge/EXPLORE-7C3AED?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
 
 </td>
-<td align="center" width="33%">
+</tr>
+<tr>
+<td>
 
-**BACKEND**
+<img src="https://img.shields.io/badge/02-GAME_TECH-EC4899?style=flat-square"/>
 
-Node.js · Python
+### 🎮 WASM Game Extractor
 
-</td>
-<td align="center" width="33%">
+Exploring WebAssembly game resources and extraction.
 
-**TOOLS**
-
-Git · GitHub · Linux
+<a href="https://github.com/spa-rk113/LEGACY">
+<img src="https://img.shields.io/badge/VIEW_REPOSITORY-7C3AED?style=for-the-badge&logo=github&logoColor=white"/>
+</a>
 
 </td>
 </tr>
 </table>
 
-<br/>
+---
 
 <div align="center">
 
-# ✦ GITHUB ACTIVITY
+<img src="https://img.shields.io/badge/04-SOCIAL_LINKS-8B5CF6?style=for-the-badge"/>
 
-<img width="100%" src="https://github-readme-stats.vercel.app/api?username=spa-rk113&show_icons=true&hide_border=true&bg_color=0B0718&title_color=A78BFA&icon_color=22D3EE&text_color=E2E8F0&ring_color=8B5CF6"/>
+# FIND ME ON INSTAGRAM
+
+<a href="https://instagram.com/spa_rk113">
+
+<img src="https://img.shields.io/badge/INSTAGRAM-@spa__rk113-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
+
+</a>
+
+<br/><br/>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=rect&height=100&color=0:231044,50:5827A6,100:9B36D3&text=@spa_rk113&fontSize=34&fontColor=FFFFFF&animation=fadeIn"/>
+
+### Rishabh Minj
+
+<sub>PERSONAL BLOG · INSTAGRAM</sub>
 
 <br/>
 
-<img width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=spa-rk113&theme=transparent&hide_border=true&background=0B0718&ring=A78BFA&fire=22D3EE&currStreakLabel=A78BFA"/>
+<table>
+<tr>
+<td align="center">
 
-<br/>
+**12**
 
-<img width="75%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=spa-rk113&layout=compact&hide_border=true&bg_color=0B0718&title_color=A78BFA&text_color=E2E8F0"/>
+<sub>POSTS</sub>
+
+</td>
+<td align="center">
+
+**65**
+
+<sub>FOLLOWERS</sub>
+
+</td>
+<td align="center">
+
+**7**
+
+<sub>FOLLOWING</sub>
+
+</td>
+</tr>
+</table>
+
+<a href="https://instagram.com/spa_rk113">
+<img src="https://img.shields.io/badge/OPEN_INSTAGRAM-FF3D79?style=for-the-badge&logo=instagram&logoColor=white"/>
+</a>
+
+<sub>Tap the card to visit my profile ↗</sub>
 
 </div>
 
-<br/>
+---
 
 <div align="center">
 
-# ✦ CONTRIBUTION SPACE
+<img src="https://img.shields.io/badge/05-STATISTICS-8B5CF6?style=for-the-badge"/>
+
+# GITHUB ANALYTICS
+
+<br/>
+
+<img width="100%" src="https://github-readme-stats.vercel.app/api?username=spa-rk113&show_icons=true&hide_border=true&bg_color=0B0718&title_color=C4A1FF&icon_color=00D4FF&text_color=E2E8F0&rank_icon=github"/>
+
+<br/>
+
+<img width="100%" src="https://github-readme-streak-stats.herokuapp.com/?user=spa-rk113&theme=transparent&hide_border=true&background=0B0718&ring=9B6DFF&fire=00D4FF&currStreakLabel=C4A1FF&sideLabels=FFFFFF"/>
+
+<br/>
+
+<img width="85%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=spa-rk113&layout=compact&hide_border=true&bg_color=0B0718&title_color=C4A1FF&text_color=FFFFFF"/>
+
+</div>
+
+---
+
+<div align="center">
+
+<img src="https://img.shields.io/badge/06-CONTRIBUTIONS-8B5CF6?style=for-the-badge"/>
+
+# THE CONTRIBUTION MATRIX
 
 <img width="100%" src="https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg"/>
 
 <br/><br/>
 
-<img src="https://capsule-render.vercel.app/api?type=rect&color=0B0718&height=130&section=footer&text=THANKS%20FOR%20VISITING&fontSize=27&fontColor=A78BFA&desc=Stay%20curious.%20Keep%20building.&descColor=22D3EE&animation=fadeIn"/>
+<img src="https://img.shields.io/badge/STATUS-ALWAYS_LEARNING-00C9FF?style=for-the-badge"/>
+
+<br/><br/>
+
+### THANKS FOR EXPLORING MY SPACE ✦
+
+<sub>Designed with curiosity. Built with code.</sub>
+
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=140&color=0:9B36D3,50:30105D,100:080817&section=footer"/>
 
 </div>
