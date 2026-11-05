@@ -1,16 +1,35 @@
 
-/* ==========================================
-   SPARK113 — INTERACTIVE DIGITAL WORKSPACE
-   ========================================== */
+"use strict";
+
+/* =========================================
+   SPARK113 — DIGITAL WORKSPACE
+   Complete interactive portfolio controller
+========================================= */
 
 const folderData = {
   projects: {
-    title: "Projects",
+    title: "My Projects",
     icon: "📁",
     files: [
-      { name: "WebXtract", type: "Project", icon: "🌐", description: "Website resource explorer." },
-      { name: "GitHub Portfolio", type: "Website", icon: "💻", description: "My personal digital portfolio." },
-      { name: "Future Projects", type: "Coming Soon", icon: "🚀", description: "More projects are in development." }
+      {
+        name: "WebXtract",
+        type: "Project",
+        icon: "🌐",
+        description: "A website resource explorer.",
+        link: "https://github.com/spa-rk113"
+      },
+      {
+        name: "GitHub Portfolio",
+        type: "Website",
+        icon: "💻",
+        description: "My personal digital portfolio."
+      },
+      {
+        name: "Future Projects",
+        type: "Coming Soon",
+        icon: "🚀",
+        description: "More projects are in development."
+      }
     ]
   },
 
@@ -18,30 +37,80 @@ const folderData = {
     title: "Experiments",
     icon: "🧪",
     files: [
-      { name: "Web Experiments", type: "Experiment", icon: "⚗️", description: "Testing new web technologies." },
-      { name: "Animation Lab", type: "Experiment", icon: "✨", description: "Visual and motion experiments." },
-      { name: "Creative Ideas", type: "Notes", icon: "💡", description: "Ideas for future creations." }
+      {
+        name: "Web Experiments",
+        type: "Experiment",
+        icon: "🌀",
+        description: "Testing creative web technologies."
+      },
+      {
+        name: "Animation Lab",
+        type: "Creative Lab",
+        icon: "✨",
+        description: "Exploring CSS and JavaScript animations."
+      },
+      {
+        name: "Creative Ideas",
+        type: "Ideas",
+        icon: "💡",
+        description: "A collection of future concepts."
+      }
     ]
   },
 
   tools: {
-    title: "Tools",
+    title: "Developer Tools",
     icon: "🛠️",
     files: [
-      { name: "WebXtract", type: "Tool", icon: "🔍", description: "Explore website resources." },
-      { name: "Developer Tools", type: "Collection", icon: "⚙️", description: "Useful development tools." }
+      {
+        name: "WebXtract",
+        type: "Web Tool",
+        icon: "🔍",
+        description: "Explore website resources."
+      },
+      {
+        name: "Developer Utilities",
+        type: "Coming Soon",
+        icon: "⚙️",
+        description: "Useful tools for developers."
+      }
     ]
   },
 
   anime: {
-    title: "Anime Worlds",
-    icon: "🌌",
+    title: "Anime Collection",
+    icon: "🎴",
     files: [
-      { name: "Solo Leveling", type: "Anime World", icon: "⚔️", description: "Sung Jinwoo" },
-      { name: "Mushoku Tensei", type: "Anime World", icon: "✨", description: "Rudeus Greyrat" },
-      { name: "No Longer Allowed in Another World", type: "Anime World", icon: "📖", description: "Sensei" },
-      { name: "KonoSuba", type: "Anime World", icon: "🔥", description: "Kazuma Satou and Darkness" },
-      { name: "Tsukimichi", type: "Anime World", icon: "🌙", description: "Makoto, Tomoe and Mio" }
+      {
+        name: "Solo Leveling",
+        type: "Anime World",
+        icon: "🌑",
+        description: "Sung Jinwoo's world."
+      },
+      {
+        name: "Mushoku Tensei",
+        type: "Anime World",
+        icon: "🔮",
+        description: "The world of Rudeus Greyrat."
+      },
+      {
+        name: "No Longer Allowed in Another World",
+        type: "Anime World",
+        icon: "📖",
+        description: "The world of Sensei."
+      },
+      {
+        name: "KonoSuba",
+        type: "Anime World",
+        icon: "💥",
+        description: "Kazuma Satou and Darkness."
+      },
+      {
+        name: "Tsukimichi: Moonlit Fantasy",
+        type: "Anime World",
+        icon: "🌙",
+        description: "Makoto Misumi, Tomoe and Mio."
+      }
     ]
   },
 
@@ -49,40 +118,77 @@ const folderData = {
     title: "About Me",
     icon: "👤",
     files: [
-      { name: "GitHub Profile", type: "Profile", icon: "🐙", description: "Explore my GitHub repositories.", url: "https://github.com/spa-rk113" },
-      { name: "Instagram", type: "Social", icon: "📸", description: "Visit my Instagram profile.", url: "https://instagram.com/spa_rk113" }
+      {
+        name: "GitHub Profile",
+        type: "Profile",
+        icon: "🐙",
+        description: "Explore my GitHub repositories.",
+        link: "https://github.com/spa-rk113"
+      },
+      {
+        name: "Instagram",
+        type: "Social",
+        icon: "📸",
+        description: "Find me on Instagram.",
+        link: "https://instagram.com/spa_rk113"
+      }
     ]
   }
 };
 
-/* ==========================================
-   ELEMENT REFERENCES
-   ========================================== */
+/* =========================================
+   ELEMENTS
+========================================= */
 
 const fileWindow = document.getElementById("file-window");
+const folders = document.querySelectorAll(".folder");
+const animeCards = document.querySelectorAll(".anime-card");
 
 let activeFolder = null;
+let closingTimer = null;
 
-/* ==========================================
+/* =========================================
+   SAFE HTML
+========================================= */
+
+function escapeHTML(value) {
+  return String(value).replace(/[&<>"']/g, character => {
+    const entities = {
+      "&": "&amp;",
+      "<": "&lt;",
+      ">": "&gt;",
+      '"': "&quot;",
+      "'": "&#039;"
+    };
+
+    return entities[character];
+  });
+}
+
+/* =========================================
    OPEN FOLDER
-   ========================================== */
+========================================= */
 
 function openFolder(folderId, clickedFolder) {
   const folder = folderData[folderId];
 
   if (!folder || !fileWindow) return;
 
+  clearTimeout(closingTimer);
+
   activeFolder = folderId;
 
-  document.querySelectorAll(".folder").forEach(item => {
+  folders.forEach(item => {
     item.classList.remove("active", "opening");
+    item.setAttribute("aria-expanded", "false");
   });
 
   if (clickedFolder) {
     clickedFolder.classList.add("active", "opening");
+    clickedFolder.setAttribute("aria-expanded", "true");
   }
 
-  renderFiles(folder);
+  renderFiles(folderId);
 
   fileWindow.hidden = false;
   fileWindow.classList.remove("window-closing");
@@ -92,90 +198,133 @@ function openFolder(folderId, clickedFolder) {
     block: "nearest"
   });
 
-  setTimeout(() => {
-    clickedFolder?.classList.remove("opening");
+  closingTimer = setTimeout(() => {
+    if (clickedFolder) {
+      clickedFolder.classList.remove("opening");
+    }
   }, 500);
 }
 
-/* ==========================================
+/* =========================================
    RENDER FILES
-   ========================================== */
+========================================= */
 
-function renderFiles(folder) {
+function renderFiles(folderId) {
+  const folder = folderData[folderId];
+
+  if (!folder || !fileWindow) return;
+
+  const filesHTML = folder.files.map((file, index) => {
+    const action = file.link
+      ? `<a class="file-action" href="${escapeHTML(file.link)}"
+           target="_blank" rel="noopener noreferrer">
+           Open ↗
+         </a>`
+      : "";
+
+    return `
+      <article class="file-item" style="--file-index:${index}">
+        <div class="file-icon">${escapeHTML(file.icon)}</div>
+
+        <div class="file-info">
+          <h3>${escapeHTML(file.name)}</h3>
+          <span>${escapeHTML(file.type)}</span>
+          <p>${escapeHTML(file.description)}</p>
+        </div>
+
+        ${action}
+      </article>
+    `;
+  }).join("");
+
   fileWindow.innerHTML = `
     <div class="file-window-header">
       <div>
+        <span class="window-label">DIGITAL DIRECTORY</span>
         <h2>${escapeHTML(folder.icon)} ${escapeHTML(folder.title)}</h2>
-        <p>${folder.files.length} items available</p>
       </div>
 
-      <button class="close-window" aria-label="Close folder">
-        ✕
-      </button>
+      <button
+        class="close-window"
+        type="button"
+        aria-label="Close folder"
+      >✕</button>
+    </div>
+
+    <div class="file-search">
+      <span>⌕</span>
+      <input
+        type="search"
+        class="file-search-input"
+        placeholder="Search files..."
+        aria-label="Search files"
+      >
     </div>
 
     <div class="file-list">
-      ${folder.files.map((file, index) => `
-        <div class="file-item"
-             style="animation-delay:${index * 80}ms">
-
-          <div class="file-item-icon">${escapeHTML(file.icon)}</div>
-
-          <div class="file-item-info">
-            <strong>${escapeHTML(file.name)}</strong>
-            <span>${escapeHTML(file.description)}</span>
-          </div>
-
-          <span class="file-type">${escapeHTML(file.type)}</span>
-
-          ${
-            file.url
-              ? `<a class="file-open-link"
-                    href="${escapeHTML(file.url)}"
-                    target="_blank"
-                    rel="noopener noreferrer">↗</a>`
-              : ""
-          }
-        </div>
-      `).join("")}
+      ${filesHTML}
     </div>
+
+    <p class="file-count">
+      ${folder.files.length} items in this directory
+    </p>
   `;
 
-  fileWindow.querySelector(".close-window")
-    ?.addEventListener("click", closeFolder);
+  const closeButton = fileWindow.querySelector(".close-window");
+  const searchInput = fileWindow.querySelector(".file-search-input");
+
+  closeButton.addEventListener("click", closeFolder);
+  searchInput.addEventListener("input", filterFiles);
 }
 
-/* ==========================================
+/* =========================================
+   SEARCH FILES
+========================================= */
+
+function filterFiles(event) {
+  const query = event.target.value.toLowerCase();
+  const items = fileWindow.querySelectorAll(".file-item");
+
+  items.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    item.hidden = !text.includes(query);
+  });
+}
+
+/* =========================================
    CLOSE FOLDER
-   ========================================== */
+========================================= */
 
 function closeFolder() {
-  if (!fileWindow) return;
+  if (!fileWindow || fileWindow.hidden) return;
 
   fileWindow.classList.add("window-closing");
 
-  setTimeout(() => {
+  folders.forEach(item => {
+    item.classList.remove("active", "opening");
+    item.setAttribute("aria-expanded", "false");
+  });
+
+  activeFolder = null;
+
+  clearTimeout(closingTimer);
+
+  closingTimer = setTimeout(() => {
     fileWindow.hidden = true;
     fileWindow.classList.remove("window-closing");
-
-    document.querySelectorAll(".folder").forEach(folder => {
-      folder.classList.remove("active", "opening");
-    });
-
-    activeFolder = null;
   }, 250);
 }
 
-/* ==========================================
-   FOLDER CLICK EVENTS
-   ========================================== */
+/* =========================================
+   FOLDER EVENTS
+========================================= */
 
-document.querySelectorAll(".folder").forEach(folder => {
+folders.forEach(folder => {
+  const folderId = folder.dataset.folder;
+
+  folder.setAttribute("aria-expanded", "false");
+
   folder.addEventListener("click", () => {
-    const folderId = folder.dataset.folder;
-
-    if (!folderId) return;
-
     if (activeFolder === folderId) {
       closeFolder();
     } else {
@@ -183,101 +332,155 @@ document.querySelectorAll(".folder").forEach(folder => {
     }
   });
 
-  folder.setAttribute("tabindex", "0");
-  folder.setAttribute("role", "button");
-
   folder.addEventListener("keydown", event => {
-    if (event.key === "Enter" || event.key === " ") {
+    if (
+      event.key === "Enter" ||
+      event.key === " "
+    ) {
       event.preventDefault();
       folder.click();
     }
   });
 });
 
-/* ==========================================
-   SAFE HTML TEXT
-   ========================================== */
+/* =========================================
+   ANIME SCENE INTERACTIONS
+========================================= */
 
-function escapeHTML(value) {
-  return String(value).replace(/[&<>"']/g, char => ({
-    "&": "&amp;",
-    "<": "&lt;",
-    ">": "&gt;",
-    '"': "&quot;",
-    "'": "&#039;"
-  })[char]);
-}
+animeCards.forEach(card => {
+  card.setAttribute("tabindex", "0");
+  card.setAttribute("role", "button");
 
-/* ==========================================
-   ANIME CHARACTER DATA
-   Add GIF paths when the GIF files exist.
-   ========================================== */
+  function selectScene() {
+    animeCards.forEach(other => {
+      other.classList.remove("scene-selected");
+      other.setAttribute("aria-pressed", "false");
+    });
+
+    card.classList.add("scene-selected");
+    card.setAttribute("aria-pressed", "true");
+  }
+
+  card.addEventListener("click", selectScene);
+
+  card.addEventListener("keydown", event => {
+    if (
+      event.key === "Enter" ||
+      event.key === " "
+    ) {
+      event.preventDefault();
+      selectScene();
+    }
+  });
+});
+
+/* =========================================
+   KEYBOARD SHORTCUTS
+========================================= */
+
+document.addEventListener("keydown", event => {
+  if (event.key === "Escape") {
+    closeFolder();
+
+    animeCards.forEach(card => {
+      card.classList.remove("scene-selected");
+      card.setAttribute("aria-pressed", "false");
+    });
+  }
+});
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener("click", event => {
+    const targetId = link.getAttribute("href");
+
+    if (!targetId || targetId === "#") return;
+
+    const target = document.querySelector(targetId);
+
+    if (target) {
+      event.preventDefault();
+
+      target.scrollIntoView({
+        behavior: "smooth",
+        block: "start"
+      });
+    }
+  });
+});
+
+/* =========================================
+   ANIME GIF LOADER
+========================================= */
 
 const animeCharacters = [
   {
-    anime: "Solo Leveling",
-    character: "Sung Jinwoo",
-    gif: "assets/solo-leveling.gif"
+    name: "Solo Leveling",
+    file: "assets/solo-leveling.gif"
   },
   {
-    anime: "Mushoku Tensei",
-    character: "Rudeus Greyrat",
-    gif: "assets/mushoku-tensei.gif"
+    name: "Mushoku Tensei",
+    file: "assets/mushoku-tensei.gif"
   },
   {
-    anime: "No Longer Allowed in Another World",
-    character: "Sensei",
-    gif: "assets/no-longer-allowed.gif"
+    name: "No Longer Allowed in Another World",
+    file: "assets/no-longer-allowed.gif"
   },
   {
-    anime: "KonoSuba",
-    character: "Kazuma Satou and Darkness",
-    gif: "assets/konosuba.gif"
+    name: "KonoSuba",
+    file: "assets/konosuba.gif"
   },
   {
-    anime: "Tsukimichi: Moonlit Fantasy",
-    character: "Makoto Misumi, Tomoe and Mio",
-    gif: "assets/tsukimichi.gif"
+    name: "Tsukimichi: Moonlit Fantasy",
+    file: "assets/tsukimichi.gif"
   }
 ];
 
-/* ==========================================
-   OPTIONAL ANIME GIF LOADER
-   Only activates if an element exists.
-   ========================================== */
+animeCharacters.forEach(anime => {
+  const card = Array.from(animeCards).find(item => {
+    return item.dataset.anime === anime.name;
+  });
 
-document.querySelectorAll("[data-anime]").forEach(element => {
-  const anime = animeCharacters.find(
-    item => item.anime === element.dataset.anime
-  );
+  if (!card) return;
 
-  if (!anime) return;
+  const image = card.querySelector(".anime-character");
+  const placeholder = card.querySelector(".anime-placeholder");
 
-  const image = element.querySelector("img");
+  if (!image) return;
 
-  if (image) {
-    image.src = anime.gif;
-    image.alt = anime.character;
-    image.loading = "lazy";
-  }
+  image.src = anime.file;
+  image.alt = anime.name + " animated scene";
+
+  image.addEventListener("error", () => {
+    image.style.display = "none";
+
+    if (placeholder) {
+      placeholder.style.display = "grid";
+    }
+  });
+
+  image.addEventListener("load", () => {
+    image.style.display = "block";
+
+    if (placeholder) {
+      placeholder.style.display = "none";
+    }
+  });
 });
 
-/* ==========================================
-   ESCAPE KEY CLOSES FILE WINDOW
-   ========================================== */
-
-document.addEventListener("keydown", event => {
-  if (event.key === "Escape" && activeFolder) {
-    closeFolder();
-  }
-});
-
-/* ==========================================
+/* =========================================
    INITIAL STATE
-   ========================================== */
+========================================= */
 
 if (fileWindow) {
   fileWindow.hidden = true;
 }
 
-console.log("SPARK113 Digital Workspace initialized.");
+animeCards.forEach(card => {
+  card.setAttribute("aria-pressed", "false");
+});
+
+console.log("SPARK113 Digital Workspace loaded successfully.");
