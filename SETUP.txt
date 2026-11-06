@@ -1,0 +1,20 @@
+SPARK113 — HOLOGRAPHIC PROFILE README
+
+SETUP
+1. Copy your original banner GIF into assets/
+2. Name it exactly: spark113-banner.gif
+3. Upload README.md and the entire assets/ folder to the spa-rk113 profile repository.
+4. Make sure README.md is in the repository root.
+5. Open https://github.com/spa-rk113 to preview.
+
+FILES
+- assets/*.svg: custom holographic section banners and dividers
+- assets/stickers/*.svg: tiny decorative scribble stickers
+- README.md: profile layout
+
+IMPORTANT
+- This package intentionally does not include or replace your original banner.
+- GitHub sanitizes SVG and does not run arbitrary HTML/CSS/JavaScript from README files.
+- The custom SVGs here are static illustrations; the typing effect is provided by an external SVG service.
+- Some third-party stats/typing services may occasionally be unavailable.
+- No CSS code should be pasted directly into README.md.

@@ -1,163 +1,128 @@
+<div align="center">
 
-/* =================================
-   SPARK113 — HOLOGRAPHIC ANIMATIONS
-   ================================= */
+<img src="assets/spark113-banner.gif" width="100%" alt="SPARK113 — Explore • Create • Innovate"/>
 
-:root {
-  --holo-purple: #a879ff;
-  --holo-blue: #70d8ff;
-  --holo-glow: rgba(168, 121, 255, 0.35);
-}
+<br/>
 
-/* Ambient background movement */
-body::before {
-  content: "";
-  position: fixed;
-  inset: -50%;
-  z-index: -1;
-  pointer-events: none;
-  background:
-    radial-gradient(circle at 30% 40%,
-      rgba(119, 65, 190, 0.13), transparent 35%),
-    radial-gradient(circle at 75% 65%,
-      rgba(63, 116, 180, 0.10), transparent 35%);
-  animation: ambientDrift 18s ease-in-out infinite alternate;
-}
+<a href="https://github.com/spa-rk113">
+  <img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=22&duration=3500&pause=1200&color=C4A1FF&center=true&vCenter=true&width=650&lines=✦+WELCOME+TO+SPARK113+✦;EXPLORE+%E2%80%A2+CREATE+%E2%80%A2+INNOVATE;ENTER+MY+DIGITAL+UNIVERSE" alt="Animated SPARK113 heading"/>
+</a>
 
-@keyframes ambientDrift {
-  from { transform: translate(-2%, -1%) rotate(0deg); }
-  to   { transform: translate(2%, 1%) rotate(8deg); }
-}
+<br/>
 
-/* Holographic folders */
-.folder {
-  position: relative;
-  overflow: hidden;
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease,
-    border-color 0.35s ease;
-}
+<img src="https://img.shields.io/badge/✦%20SPARK113-25113D?style=for-the-badge&labelColor=090612"/>
+<img src="https://img.shields.io/badge/STATUS-CREATING-8BE9FD?style=for-the-badge&labelColor=090612"/>
+<img src="https://komarev.com/ghpvc/?username=spa-rk113&style=for-the-badge&color=8B5CF6&label=VISITORS"/>
 
-.folder::before {
-  content: "";
-  position: absolute;
-  inset: -2px;
-  border-radius: inherit;
-  pointer-events: none;
-  background: linear-gradient(
-    120deg,
-    transparent 20%,
-    rgba(168, 121, 255, 0.28),
-    rgba(112, 216, 255, 0.20),
-    transparent 80%
-  );
-  transform: translateX(-120%);
-  transition: transform 0.7s ease;
-}
+<br/><br/>
 
-.folder:hover::before {
-  transform: translateX(120%);
-}
+<img src="assets/stickers/peek.svg" width="62" alt="Tiny peek sticker"/>
+&nbsp;&nbsp;
+<img src="assets/stickers/star.svg" width="48" alt="Star doodle"/>
+&nbsp;&nbsp;
+<img src="assets/stickers/wave.svg" width="62" alt="Tiny waving sticker"/>
 
-.folder:hover {
-  transform: translateY(-7px) scale(1.025);
-  border-color: var(--holo-purple);
-  box-shadow:
-    0 0 15px var(--holo-glow),
-    0 0 35px rgba(112, 216, 255, 0.12);
-}
+</div>
 
-/* Folder opening animation */
-.folder.opening {
-  animation: folderOpen 0.45s ease;
-}
+<img src="assets/divider.svg" width="100%" alt="Gradient divider"/>
 
-@keyframes folderOpen {
-  0% { transform: scale(1); }
-  45% { transform: scale(1.07); }
-  100% { transform: scale(1); }
-}
+<div align="center">
+<img src="assets/about.svg" width="100%" alt="About me section"/>
+<br/><br/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=15&duration=3500&pause=1300&color=C4A1FF&center=true&vCenter=true&width=550&lines=Creative+Mind+%7C+Developer;Turning+Ideas+Into+Reality;Always+Learning+Something+New" alt="About animation"/>
+<br/><br/>
+<img src="https://img.shields.io/badge/💻_CODING-38235E?style=for-the-badge&labelColor=100B1D"/>
+<img src="https://img.shields.io/badge/🎨_CREATIVITY-29305A?style=for-the-badge&labelColor=100B1D"/>
+<img src="https://img.shields.io/badge/🚀_INNOVATION-16465A?style=for-the-badge&labelColor=100B1D"/>
+<br/>
+<code>ദ്ദി(˵ •̀ ᴗ - ˵ ) ✧</code>
+</div>
 
-/* File window */
-#file-window {
-  transform-origin: top center;
-  animation: windowAppear 0.4s ease both;
-}
+<img src="assets/divider.svg" width="100%" alt="Gradient divider"/>
 
-@keyframes windowAppear {
-  from {
-    opacity: 0;
-    transform: translateY(18px) scale(0.96);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
+<div align="center">
+<img src="assets/arsenal.svg" width="100%" alt="Tech arsenal"/>
+<br/><br/>
+<img src="https://skillicons.dev/icons?i=html,css,js,python,nodejs,git,github,vscode,linux&theme=dark" alt="Technology icons"/>
+<br/><br/>
+<img src="assets/stickers/star.svg" width="38" alt="Star doodle"/>
+&nbsp;&nbsp;
+<img src="https://img.shields.io/badge/⚡_BUILD-38235E?style=flat-square"/>
+<img src="https://img.shields.io/badge/⚙️_DEVELOP-29305A?style=flat-square"/>
+<img src="https://img.shields.io/badge/🌌_EXPLORE-16465A?style=flat-square"/>
+&nbsp;&nbsp;
+<img src="assets/stickers/peek.svg" width="48" alt="Tiny peek sticker"/>
+</div>
 
-/* Files entering the window */
-.file-item {
-  animation: fileEnter 0.4s ease both;
-  transition: background 0.25s ease, transform 0.25s ease;
-}
+<img src="assets/divider.svg" width="100%" alt="Gradient divider"/>
 
-.file-item:hover {
-  transform: translateX(6px);
-  background: rgba(168, 121, 255, 0.10);
-}
+<div align="center">
+<img src="assets/projects.svg" width="100%" alt="Projects"/>
+<br/><br/>
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=3500&pause=1200&color=BCA4F5&center=true&vCenter=true&width=500&lines=Ideas+deserve+to+be+built.;Creating+something+different.;One+project+at+a+time." alt="Project animation"/>
+</div>
 
-@keyframes fileEnter {
-  from {
-    opacity: 0;
-    transform: translateX(-15px);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
+<table>
+<tr>
+<td align="center" width="50%">
 
-/* Floating icons */
-.folder-icon,
-.file-icon {
-  display: inline-block;
-  animation: iconFloat 3s ease-in-out infinite;
-}
+<img src="https://img.shields.io/badge/⚡_WEBXTRACT-38235E?style=for-the-badge&labelColor=100B1D"/>
 
-@keyframes iconFloat {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
-}
+<br/><br/>
+<code>(•̀ᴗ•́)و</code>
+<br/><br/>
+**Website Resource Extractor**
 
-/* Glowing text */
-.holo-text {
-  color: #d9c8ff;
-  text-shadow:
-    0 0 8px rgba(168, 121, 255, 0.65),
-    0 0 20px rgba(168, 121, 255, 0.25);
-}
+<sub>Explore and inspect website resources.</sub>
 
-/* Anime scene image support */
-.anime-character {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
-  transform-origin: bottom center;
-}
+</td>
+<td align="center" width="50%">
 
-.anime-character:hover {
-  filter: drop-shadow(0 0 14px var(--holo-glow));
-}
+<img src="https://img.shields.io/badge/🌐_NEXT_PROJECT-16465A?style=for-the-badge&labelColor=100B1D"/>
 
-/* Respect reduced motion preferences */
-@media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    scroll-behavior: auto !important;
-    transition-duration: 0.01ms !important;
-  }
-}
+<br/><br/>
+<code>(｡•̀ᴗ-)✧</code>
+<br/><br/>
+**Something New**
+
+<sub>More experiments coming soon.</sub>
+
+</td>
+</tr>
+</table>
+
+<img src="assets/divider.svg" width="100%" alt="Gradient divider"/>
+
+<div align="center">
+<img src="assets/stats.svg" width="100%" alt="GitHub insights"/>
+<br/><br/>
+<img src="https://github-readme-stats.vercel.app/api?username=spa-rk113&show_icons=true&hide_border=true&bg_color=100B1D&title_color=C4A1FF&icon_color=8BE9FD&text_color=E6E0F0&border_radius=16" alt="GitHub overview"/>
+<br/><br/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=spa-rk113&hide_border=true&background=100B1D&ring=9B7BFF&fire=8BE9FD&currStreakLabel=C4A1FF&sideLabels=C4A1FF&dates=AAA0BD&border_radius=16" alt="Contribution streak"/>
+<br/><br/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=spa-rk113&layout=compact&hide_border=true&bg_color=100B1D&title_color=C4A1FF&text_color=E6E0F0&border_radius=16" alt="Top languages"/>
+<br/><br/>
+<img src="assets/stickers/wave.svg" width="58" alt="Tiny waving sticker"/>
+</div>
+
+<img src="assets/divider.svg" width="100%" alt="Gradient divider"/>
+
+<div align="center">
+<img src="assets/connect.svg" width="100%" alt="Connect with me"/>
+<br/><br/>
+<a href="https://github.com/spa-rk113">
+<img src="https://img.shields.io/badge/GITHUB-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub"/>
+</a>
+<a href="https://www.instagram.com/spa_rk113/">
+<img src="https://img.shields.io/badge/INSTAGRAM-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram"/>
+</a>
+<br/><br/>
+<img src="assets/stickers/peek.svg" width="55" alt="Tiny peek sticker"/>
+</div>
+
+<div align="center">
+<br/>
+<img src="https://readme-typing-svg.demolab.com?font=Orbitron&weight=800&size=19&duration=3500&pause=1300&color=C4A1FF&center=true&vCenter=true&width=550&lines=THANKS+FOR+VISITING+✦;KEEP+EXPLORING;SEE+YOU+IN+THE+NEXT+LEVEL+⚡" alt="Animated footer"/>
+<br/><br/>
+<img src="https://img.shields.io/badge/✦_EXPLORE_•_CREATE_•_INNOVATE_✦-25113D?style=for-the-badge&labelColor=090612"/>
+</div>
