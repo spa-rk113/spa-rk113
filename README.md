@@ -99,9 +99,3 @@
 <img src="assets/stickers/konosuba-squad.gif" width="145" alt="Konosuba sticker"/>
 <img src="assets/stickers/mewing-cat.png" width="74" alt="Mewing cat sticker"/>
 </div>
----
-
-## ✨ Latest Update
-
-SPARK113 is continuously evolving.
-New experiments and projects are on the way!
