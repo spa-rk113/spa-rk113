@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="112" viewBox="0 0 900 112">
+<defs><linearGradient id="b" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#120D25"/><stop offset=".55" stop-color="#29204A"/><stop offset="1" stop-color="#102B40"/></linearGradient><linearGradient id="e"><stop stop-color="#A77BFF"/><stop offset=".52" stop-color="#7DE5FF"/><stop offset="1" stop-color="#B58AFF"/></linearGradient></defs>
+<rect x="7" y="7" width="886" height="98" rx="23" fill="url(#b)" stroke="url(#e)" stroke-width="1.6"/>
+<path d="M30 28h74M796 84h74" stroke="#8BE9FD" stroke-opacity=".65" stroke-width="1.5"/>
+<circle cx="42" cy="55" r="3" fill="#B99BFF"/><circle cx="858" cy="55" r="3" fill="#8BE9FD"/>
+<text x="450" y="54" text-anchor="middle" fill="#F3EBFF" font-family="Verdana,Arial,sans-serif" font-size="25" font-weight="700" letter-spacing="2">✦ ABOUT ME ✦</text>
+<text x="450" y="81" text-anchor="middle" fill="#C5CBE5" font-family="Verdana,Arial,sans-serif" font-size="12" letter-spacing="2.5">CREATIVE MIND  •  DEVELOPER  •  EXPLORER</text></svg>
